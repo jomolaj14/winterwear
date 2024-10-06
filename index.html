@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <!-- tailwind css link  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+  type="text/javascript"
+  src="../node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+    <!-- tailwind config  -->
+    <script>
+
+
+
+
+
+
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                header: '#FFFBF0',
+                primary: '#FABE4C',
+                secondary: 'red',
+                btn1: '#A4BC46',
+                btn2: '#85A019',
+                cardBg: '#F1F1F1',
+
+              },
+              fontFamily: {
+                bebas: ['Bebas Neue', 'cursive'],
+                roboto: ['Roboto', 'sans-serif'],
+                },
+            }
+          }
+        }
+
+
+
+        
+      </script>
+  
+      <script src="https://kit.fontawesome.com/633379e16d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="home bg-header h-screen w-full">
+    
+     <!-- component -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css" integrity="sha256-x8PYmLKD83R9T/sYmJn1j3is/chhJdySyhet/JuHnfY=" crossorigin="anonymous" />
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  html,
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+/* navigation 
+ - show navigation always on the large screen devices with (min-width:1024)
+*/
+
+@media (min-width: 1024px) {
+  .top-navbar {
+    display: inline-flex !important;
+  }
+}
+
+</style>
+ 
+<nav class="flex items-center bg-800 p-3 flex-wrap">
+      <a href="#" class="p-2 mr-4 inline-flex items-center">
+        <img width="50px" class="ms-5" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHfIiKh-DHqH2gj8fi9fDFkYIlO4Wk8M7OcgWu3NoXBQTc9jKD9kU-jNlfmz8LvLwbrbQ&usqp=CAU">
+        <span class="text-xl text-gray-700 font-bold uppercase tracking-wide"
+          >    winter Fashion Co.</span
+        >
+      </a>
+      <button
+        class="text-dark inline-flex p-3 hover:bg-900 rounded lg:hidden ml-auto hover:text-black outline-none nav-toggler"
+        data-target="#navigation"
+      >
+        <i class="material-icons">menu</i>
+      </button>
+      <div
+        class="menu hidden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto" 
+        id="navigation"
+      >
+        <div
+          class="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start gap-4  flex flex-col lg:h-auto"
+        >
+          <a
+            href="#"
+            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-700 items-center gap-4 justify-center hover:bg-gray-900 hover:text-white"
+          >
+            <span>Home</span>
+          </a>
+          <a
+            href="#"
+            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-700 items-center gap-4 justify-center hover:bg-gray-900 hover:text-white"
+          >
+            <span>About</span>
+          </a>
+          <a
+            href="#"
+            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-700 items-center gap-4 justify-center hover:bg-gray-900 hover:text-white"
+          >
+            <span>Services</span>
+          </a>
+       
+       
+          <a
+            href="#"
+            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-700 items-center justify-center hover:bg-gray-900 hover:text-white"
+          >
+            <span class="me-5">Contact Us</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+<script>
+  $(document).ready(function() {
+  $(".nav-toggler").each(function(_, navToggler) {
+    var target = $(navToggler).data("target");
+    $(navToggler).on("click", function() {
+      $(target).animate({
+        height: "toggle"
+      });
+    });
+  });
+});
+
+</script>
+        <!-- banner  -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-7xl mx-auto px-4">
+            <!-- left  -->
+            <div class="flex flex-col justify-center items-start gap-8 h-full">
+                <h1 class="text-primary text-4xl md:text-7xl font-extrabold">YOU'VE BEEN <br/><span class="text-secondary"> WARMED</span></h1>
+                <p class="font-roboto text-dark ms-2">clothes that are sure to heat up your winter
+                    </p>
+                    
+                <button><a href="#" class="bg-gradient-to-r from-btn1 to-btn2 text-left px-8 py-5 rounded-md text-white"><i class="fa-solid fa-cart-shopping mr-2"> </i>BUY NOW</a></button>
+            </div>
+            <!-- right  -->
+            <div>
+                <img class="w-4/5 " src="./assets/images/model.png" alt="model image">
+            </div>
+        </section>
+    </header>
+    <!-- main content  -->
+    <main>
+        <!-- woman jacket -->
+        <section class="max-w-7xl mx-auto mt-28 px-6">
+            <h2 class="font-bebas text-5xl">WoMan Jacket</h2>
+            <!-- jacket cart  -->
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-10 mt-10">
+                <!-- card  -->
+                <div class="drop-shadow-md p-5 rounded-lg bg-white h-[500px]">
+                    <!-- card image  -->
+                    <div class="bg-cardBg rounded-lg  flex justify-center">
+                        <img class="p-5 h-72" src="https://i.pinimg.com/564x/33/c0/cd/33c0cd8e041345a3cfc700a95f24dd83.jpg" alt="Jacket">
+                    </div>
+                    <!-- card content  -->
+                    <div class="mt-4">
+                        <h3 class="text-2xl font-semibold">long wool</h3>
+                        <p>Charcoal  solid fuzzy overcoat, has a notched lapel collar, long sleeves
+                          .</p>
+                        <!-- buttom  -->
+                        <div class="flex justify-between mt-6">
+                            <p class="text-4xl font-semibold text-primary">$234</p>
+                            <button><a href="#" class="bg-gradient-to-r from-btn1 to-btn2 text-left px-8 py-5 rounded-lg text-white"><i class="fa-solid fa-cart-shopping mr-2"> </i>BUY NOW</a></button>
+                        </div>                        
+                    </div>                    
+                </div>
+                <div class="drop-shadow-md p-5 rounded-lg bg-white h-[500px]">
+                    <!-- card image  -->
+                    <div class="bg-cardBg rounded-lg  flex justify-center">
+                        <img class="p-5 h-72" src="https://i.pinimg.com/564x/79/4a/46/794a46ca45399f6ae82d7714e0a95f4d.jpg" alt="Jacket">
+                    </div>
+                    <!-- card content  -->
+                    <div class="mt-4">
+                        <h3 class="text-2xl font-semibold">long teddy wool coat</h3>
+                        <p>Charcoal grey solid fuzzy overcoat, has a notched lapel collar, long sleeves.</p>
+                        <!-- buttom  -->
+                        <div class="flex justify-between mt-6">
+                            <p class="text-4xl font-semibold text-primary">$434</p>
+                            <button><a href="#" class="bg-gradient-to-r from-btn1 to-btn2 text-left px-8 py-5 rounded-lg text-white"><i class="fa-solid fa-cart-shopping mr-2"> </i>BUY NOW</a></button>
+                        </div>                        
+                    </div>                    
+                </div>
+                <div class="drop-shadow-md p-5 rounded-lg bg-white h-[500px]">
+                    <!-- card image  -->
+                    <div class="bg-cardBg rounded-lg  flex justify-center">
+                        <img class="p-5 h-72" src="https://i.pinimg.com/564x/3a/a3/43/3aa343e3be405eb6d0b716768069f336.jpg" alt="Jacket">
+                    </div>
+                    <!-- card content  -->
+                    <div class="mt-4">
+                        <h3 class="text-2xl font-semibold">Double -sided Fleece jacket</h3>
+                        <p>Charcoal grey solid fuzzy overcoat, has a notched lapel collar, long sleeves</p>
+                        <!-- buttom  -->
+                        <div class="flex justify-between mt-6">
+                            <p class="text-4xl font-semibold text-primary">$334</p>
+                            <button><a href="#" class="bg-gradient-to-r from-btn1 to-btn2 text-left px-8 py-5 rounded-lg text-white"><i class="fa-solid fa-cart-shopping mr-2"> </i>BUY NOW</a></button>
+                        </div>                        
+                    </div>                    
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <div class="relative overflow-hidden bg-white mt-5">
+            <div class="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
+              <div class="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
+                <div class="sm:max-w-lg">
+                  <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">WINTER styles are finally here</h1>
+                  <p class="mt-4 text-xl text-gray-500">This year, our new winter collection will shelter you from the harsh elements of a world that doesn't care if you live or die.</p>
+                </div>
+                <div>
+                  <div class="mt-10">
+                    <!-- Decorative image grid -->
+                    <div aria-hidden="true" class="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl">
+                      <div class="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
+                        <div class="flex items-center space-x-6 lg:space-x-8">
+                          <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                            <div class="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
+                              <img src="https://i.pinimg.com/474x/46/df/d3/46dfd3829b4d6af595f9eda253aacf2e.jpg" alt="" class="h-full w-full object-cover object-center">
+                            </div>
+                            <div class="h-64 w-44 overflow-hidden rounded-lg">
+                              <img src="https://i.pinimg.com/736x/0e/ee/95/0eee95b26185bffe4942bc2efcec80bd.jpg">
+                            </div>
+                          </div>
+                          <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                            <div class="h-64 w-44 overflow-hidden rounded-lg">
+                              <img src="https://i.pinimg.com/474x/ba/b9/57/bab9571ae86d174a9fdc45ef61745da3.jpg" alt="" class="h-full w-full object-cover object-center">
+                            </div>
+                            <div class="h-64 w-44 overflow-hidden rounded-lg">
+                              <img src="https://i.pinimg.com/474x/7c/c1/85/7cc1851c88fff900f100f33a80159c9a.jpg">
+                            </div>
+                            <div class="h-64 w-44 overflow-hidden rounded-lg">
+                              <img src="https://i.pinimg.com/474x/92/3e/b4/923eb42151ce86ec5575d91088c1bcdf.jpg">
+                            </div>
+                          </div>
+                          <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                            <div class="h-64 w-44 overflow-hidden rounded-lg">
+                              <img src="https://i.pinimg.com/474x/02/42/e2/0242e2bb0497f3514fa3822a76232f45.jpg" alt="" class="h-full w-full object-cover object-center">
+                            </div>
+                            <div class="h-64 w-44 overflow-hidden rounded-lg">
+                              <img src="https://i.pinimg.com/474x/7b/d4/75/7bd4759c7c815f3776a417bbcbd225d3.jpg">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+          
+                    <a href="#" class="inline-block rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-center font-medium text-white hover:bg-indigo-700">Shop Collection</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+        <!-- man jacket -->
+        <section class="max-w-7xl mx-auto mt-28 px-6">
+            <h2 class="font-bebas text-5xl">Men Jacket</h2>
+            <!-- jacket cart  -->
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-10 mt-10">
+                <!-- card  -->
+                <div class="drop-shadow-md p-5 rounded-lg bg-white h-[500px]">
+                    <!-- card image  -->
+                    <div class="bg-cardBg rounded-lg  flex justify-center">
+                        <img class="p-5 h-72" src="https://i.pinimg.com/564x/53/0c/86/530c868e174c389aae832a731e2984d8.jpg" alt="Jacket">
+                    </div>
+                    <!-- card content  -->
+                    <div class="mt-4">
+                        <h3 class="text-2xl font-semibold">Neck jacket</h3>
+                        <p>Mens tall borg funnel neck jacket<br/> 
+                            cream Xxl</p>
+                        <!-- buttom  -->
+                        <div class="flex justify-between mt-6">
+                            <p class="text-4xl font-semibold text-primary">$234</p>
+                            <button><a href="#" class="bg-gradient-to-r from-btn1 to-btn2 text-left px-8 py-5 rounded-lg text-white"><i class="fa-solid fa-cart-shopping mr-2"> </i>BUY NOW</a></button>
+                        </div>                        
+                    </div>                    
+                </div>
+                <div class="drop-shadow-md p-5 rounded-lg bg-white h-[500px]">
+                    <!-- card image  -->
+                    <div class="bg-cardBg rounded-lg  flex justify-center">
+                        <img class="p-5 h-72" src="https://i.pinimg.com/564x/b3/cd/ce/b3cdce4f9d6480c46316631b37c96ab1.jpg" alt="Jacket">
+                    </div>
+                    <!-- card content  -->
+                    <div class="mt-4">
+                        <h3 class="text-2xl font-semibold"> Thickened fleece jacket</h3>
+                        <p>mens Thickened fleece jacket, <br/> 
+                            cream M</p>
+                        <!-- buttom  -->
+                        <div class="flex justify-between mt-6">
+                            <p class="text-4xl font-semibold text-primary">$234</p>
+                            <button><a href="#" class="bg-gradient-to-r from-btn1 to-btn2 text-left px-8 py-5 rounded-lg text-white"><i class="fa-solid fa-cart-shopping mr-2"> </i>BUY NOW</a></button>
+                        </div>                        
+                    </div>                    
+                </div>
+                <div class="drop-shadow-md p-5 rounded-lg bg-white h-[500px]">
+                    <!-- card image  -->
+                    <div class="bg-cardBg rounded-lg  flex justify-center">
+                        <img class="p-5 h-72" src="./assets/images/jacket-6.png" alt="Jacket">
+                    </div>
+                    <!-- card content  -->
+                    <div class="mt-4">
+                        <h3 class="text-2xl font-semibold">winter thickened jacket</h3>
+                        <p>warm fashion casual thick suede jackets <br/> 
+                            mens streetwear</p>
+                        <!-- buttom  -->
+                        <div class="flex justify-between mt-6">
+                            <p class="text-4xl font-semibold text-primary">$234</p>
+                            <button><a href="#" class="bg-gradient-to-r from-btn1 to-btn2 text-left px-8 py-5 rounded-lg text-white"><i class="fa-solid fa-cart-shopping mr-2"> </i>BUY NOW</a></button>
+                        </div>                        
+                    </div>                    
+                </div>
+            </div>
+
+
+           
+
+            <article style="margin-top: 100px;" class="flex bg-white transition hover:shadow-xl">
+                <div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
+                  <time
+                    datetime="2022-10-10"
+                    class="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900"
+                  >
+                    <span>2024</span>
+                    <span class="w-px flex-1 bg-gray-900/10"></span>
+                    <span>Oct 3</span>
+                  </time>
+                </div>
+              
+                <div class="hidden sm:block sm:basis-56">
+                  <img
+                    alt=""
+                    src="https://www.roots.com/dw/image/v2/BGGS_PRD/on/demandware.static/-/Sites-roots_master_catalog/default/dw230a483b/images/49020024_030_a.jpg?sw=1200&sh=1200&sm=fit"
+                    class="aspect-square h-full w-full object-cover"
+                  />
+                </div>
+              
+                <div class="flex flex-1 flex-col justify-between">
+                  <div class="border-s border-gray-900/10 p-4 sm:border-l-transparent sm:p-6">
+                    <a href="#">
+                      <h3 class="font-bold uppercase text-gray-900">
+                       Dress for Winter: 13 Fashion Tips for Cold Weather
+                      </h3>
+                    </a>
+              
+                    <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-700">
+                      <span class="text-gray-500">Last updated: 0ct 3, 2024 • 3 min read</span>
+
+<br>When it comes to your winter wardrobe, goal number one should be to protect yourself from cold weather. <br>But that doesn't mean that you can't have fun with winter fashion.
+                    </p>
+                  </div>
+              
+                  <div class="sm:flex sm:items-end sm:justify-end">
+                    <a
+                      href="#"
+                      class="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400"
+                    >
+                      Read Blog
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+        </section>
+
+
+<section>
+
+    <section>
+        <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+          <header class="text-center">
+            <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">Winter accessories</h2>
+      
+            <p class="mx-auto mt-4 max-w-md text-gray-500">
+        The relaxed fit offers a flattering silhouette, while the ribbed cuffs and hem provide a secure and snug fit.
+            </p>
+          </header>
+      
+          <ul class="mt-8 grid grid-cols-1 gap-4 lg:grid-cols-3">
+            <li>
+              <a href="#" class="group relative block">
+                <img
+                  src="https://i.pinimg.com/564x/7a/9c/fd/7a9cfdf512ab3db7062938ca8257f813.jpg"
+                  alt=""
+                  class="aspect-square w-full object-cover transition duration-500 group-hover:opacity-90"
+                />
+      
+                <div class="absolute inset-0 flex flex-col items-start justify-end p-6">
+                  <h3 class="text-xl font-medium text-white">Scarf</h3>
+      
+                  <span
+                    class="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
+                  >
+                    Shop Now
+                  </span>
+                </div>
+              </a>
+            </li>
+      
+            <li>
+              <a href="#" class="group relative block">
+                <img
+                  src="https://i.pinimg.com/564x/a5/42/85/a5428580df7d533b4937d6256109850e.jpg"
+                  alt=""
+                  class="aspect-square w-full object-cover transition duration-500 group-hover:opacity-90"
+                />
+      
+                <div class="absolute inset-0 flex flex-col items-start justify-end p-6">
+                  <h3 class="text-xl font-medium text-white">cardigans Sweaters</h3>
+      
+                  <span
+                    class="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
+                  >
+                    Shop Now
+                  </span>
+                </div>
+              </a>
+            </li>
+      
+            <li class="lg:col-span-2 lg:col-start-2 lg:row-span-2 lg:row-start-1">
+              <a href="#" class="group relative block">
+                <img
+                  src="https://i.pinimg.com/564x/49/05/84/490584b7c9b0517e0b496122546e0590.jpg"
+                  alt=""
+                  class="aspect-square w-full object-cover transition duration-500 group-hover:opacity-90"
+                />
+      
+                <div class="absolute inset-0 flex flex-col items-start justify-end p-6">
+                  <h3 class="text-xl font-medium text-white">winter Gloves</h3>
+      
+                  <span
+                    class="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
+                  >
+                    Shop Now
+                  </span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+</section>
+
+        
+
+        <!-- our services  -->
+        <section class="max-w-7xl mx-auto mt-28 grid md:grid-cols-2 gap-x-10 gap-y-4 px-6">
+            <div class="flex items-center gap-9 order-2 md:order-1 bg-white p-5 rounded-xl drop-shadow-sm">
+                <div>
+                    <img class="w-20" src="./assets/icons/image 12.png" alt="">
+                </div>
+                <div>
+                    <h2 class="text-2xl font-semibold">Find the Perfect Fit</h2>
+                    <p>  The relaxed fit offers a flattering silhouette,</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-9 row-span-3 order-1 md:order-2 bg-white p-5 rounded-xl drop-shadow-sm">
+                <div>
+                    <img src="./assets/images/shopping.png" alt="shoping img">
+                </div>
+            </div>
+            <div class="flex items-center gap-9 order-3 md:order-3 bg-white p-5 rounded-xl drop-shadow-sm">
+                <div>
+                    <img class="w-20" src="./assets/icons/image 13.png" alt="">
+                </div>
+                <div>
+                    <h2 class="text-2xl font-semibold">Discover the New Collection</h2>
+                    <p>Everybody is different, which is why we <br/>
+                        offer styles for every body.</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-9 order-4 md:order-4 bg-white p-5 rounded-xl drop-shadow-sm">
+                <div>
+                    <img class="w-20" src="./assets/icons/image 14.png" alt="">
+                </div>
+                <div>
+                    <h2 class="text-2xl font-semibold">Autumn Energy</h2>
+                    <p> while the ribbed cuffs and them <br> provide a secure and snug fit..</p>
+                </div>
+            </div>
+        </section>
+
+
+<section>
+ 
+
+<link href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css" rel="stylesheet" />
+
+<script type="module">
+  import KeenSlider from 'https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/+esm'
+
+  const keenSlider = new KeenSlider(
+    '#keen-slider',
+    {
+      loop: true,
+      slides: {
+        origin: 'center',
+        perView: 1.25,
+        spacing: 16,
+      },
+      breakpoints: {
+        '(min-width: 1024px)': {
+          slides: {
+            origin: 'auto',
+            perView: 1.5,
+            spacing: 32,
+          },
+        },
+      },
+    },
+    []
+  )
+
+  const keenSliderPrevious = document.getElementById('keen-slider-previous')
+  const keenSliderNext = document.getElementById('keen-slider-next')
+
+  const keenSliderPreviousDesktop = document.getElementById('keen-slider-previous-desktop')
+  const keenSliderNextDesktop = document.getElementById('keen-slider-next-desktop')
+
+  keenSliderPrevious.addEventListener('click', () => keenSlider.prev())
+  keenSliderNext.addEventListener('click', () => keenSlider.next())
+
+  keenSliderPreviousDesktop.addEventListener('click', () => keenSlider.prev())
+  keenSliderNextDesktop.addEventListener('click', () => keenSlider.next())
+</script>
+
+<section class="bg-gray-50">
+  <div class="mx-auto max-w-[1340px] px-4 py-12 sm:px-6 lg:me-0 lg:py-16 lg:pe-0 lg:ps-8 xl:py-24">
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center lg:gap-16">
+      <div class="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          Don't just take our word for it...
+        </h2>
+
+        <p class="mt-4 text-gray-700">
+          leave reviews for your product or services
+        </p>
+
+        <div class="hidden lg:mt-8 lg:flex lg:gap-4">
+          <button
+            aria-label="Previous slide"
+            id="keen-slider-previous-desktop"
+            class="rounded-full border border-rose-600 p-3 text-rose-600 transition hover:bg-rose-600 hover:text-white"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-5 rtl:rotate-180"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 19.5L8.25 12l7.5-7.5"
+              />
+            </svg>
+          </button>
+
+          <button
+            aria-label="Next slide"
+            id="keen-slider-next-desktop"
+            class="rounded-full border border-rose-600 p-3 text-rose-600 transition hover:bg-rose-600 hover:text-white"
+          >
+            <svg
+              class="size-5 rtl:rotate-180"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 5l7 7-7 7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="-mx-6 lg:col-span-2 lg:mx-0">
+        <div id="keen-slider" class="keen-slider">
+          <div class="keen-slider__slide">
+            <blockquote
+              class="flex h-full flex-col justify-between bg-white p-6 shadow-sm sm:p-8 lg:p-12"
+            >
+              <div>
+                <div class="flex gap-0.5 text-green-500">
+                  <svg
+                    class="size-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
+
+                  <svg
+                    class="size-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
+
+                  <svg
+                    class="size-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
+
+                  <svg
+                    class="size-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
+
+                  <svg
+                    class="size-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
+                </div>
+
+                <div class="mt-4">
+                  <p class="text-2xl font-bold text-rose-600 sm:text-3xl">High-quality products</p>
+
+                  <p class="mt-4 leading-relaxed text-gray-700">
+                    “I ordered a Sweaters from frosty fashion last week, and I was amazed at how quickly it arrived. The packaging was secure, ensuring the item was undamaged. The customer service was exceptional, as they kept me updated throughout the entire process.
+                  </p>
+                </div>
+              </div>
+
+              <footer class="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
+                &mdash; Michael Scott
+              </footer>
+            </blockquote>
+          </div>
+
+          <div class="keen-slider__slide">
+            <blockquote
+              class="flex h-full flex-col justify-between bg-white p-6 shadow-sm sm:p-8 lg:p-12"
+            >
+              <div>
+                <div class="flex gap-0.5 text-green-500">
+                  <svg
+                    class="size-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
+
+                  <svg
+                    class="size-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
+
+                  <svg
+                    class="size-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
+
+                  <svg
+                    class="size-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
+
+                  <svg
+                    class="size-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
+                </div>
+
+                <div class="mt-4">
+                  <p class="text-2xl font-bold text-rose-600 sm:text-3xl">Helpful shop assistant.</p>
+
+                  <p class="mt-4 leading-relaxed text-gray-700">
+                    Went into ProCook on Tuesday looking to buy a gourmet pan set. Found exactly the set I was looking for with a lot of help from a very helpful and pleasant member of staff. A lovely lady with a Cockney accent looked after me and I purchased a real nice set for £79. I will definitely be shopping there again.
+                  </p>
+                </div>
+              </div>
+
+              <footer class="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
+                &mdash;adam lalewicz
+              </footer>
+            </blockquote>
+          </div>
+
+          <div class="keen-slider__slide">
+            <blockquote
+              class="flex h-full flex-col justify-between bg-white p-6 shadow-sm sm:p-8 lg:p-12"
+            >
+              <div>
+                <div class="flex gap-0.5 text-green-500">
+                  <svg
+                    class="size-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
+
+                  <svg
+                    class="size-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
+
+                  <svg
+                    class="size-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
+
+                  <svg
+                    class="size-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
+
+                  <svg
+                    class="size-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
+                </div>
+
+                <div class="mt-4">
+                  <p class="text-2xl font-bold text-rose-600 sm:text-3xl">Very good service</p>
+
+                  <p class="mt-4 leading-relaxed text-gray-700">
+                    I have used shop already and I have had a great experience from ordering a scarf to receiving it was quick the tracking information kept me up to date I’m happy
+                  </p>
+                </div>
+              </div>
+
+              <footer class="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
+                &mdash; Helen McCallum
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-8 flex justify-center gap-4 lg:hidden">
+      <button
+        aria-label="Previous slide"
+        id="keen-slider-previous"
+        class="rounded-full border border-rose-600 p-4 text-rose-600 transition hover:bg-rose-600 hover:text-white"
+      >
+        <svg
+          class="size-5 -rotate-180 transform"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+        </svg>
+      </button>
+
+      <button
+        aria-label="Next slide"
+        id="keen-slider-next"
+        class="rounded-full border border-rose-600 p-4 text-rose-600 transition hover:bg-rose-600 hover:text-white"
+      >
+        <svg
+          class="size-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+</section>
+
+
+
+
+
+        
+
+        <div class="relative isolate flex items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
+            <div class="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl" aria-hidden="true">
+              <div class="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-30" style="clip-path: polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)"></div>
+            </div>
+            <div class="absolute left-[max(45rem,calc(50%+8rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl" aria-hidden="true">
+              <div class="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-30" style="clip-path: polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)"></div>
+            </div>
+            <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+              <p class="text-sm leading-6 text-gray-900">
+                <strong class="font-semibold">Frosty fashion Co. 2024</strong><svg viewBox="0 0 2 2" class="mx-2 inline h-0.5 w-0.5 fill-current" aria-hidden="true"><circle cx="1" cy="1" r="1" /></svg>Join us in Denver from oct 3 – 19 to see what’s coming next.
+              </p>
+              <a href="#" class="flex-none rounded-full bg-gray-900 px-3.5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900">Register now <span aria-hidden="true">&rarr;</span></a>
+            </div>
+            <div class="flex flex-1 justify-end">
+              <button type="button" class="-m-3 p-3 focus-visible:outline-offset-[-4px]">
+                <span class="sr-only">Dismiss</span>
+                <svg class="h-5 w-5 text-gray-900" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+    </main>
+
+    
+</body>
+</html>
